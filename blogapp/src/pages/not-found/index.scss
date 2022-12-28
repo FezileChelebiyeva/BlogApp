@@ -1,0 +1,32 @@
+#not-found {
+  max-width: 1200px;
+  margin: 0 auto;
+  .text {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 25px;
+    .text-center {
+      text-align: center;
+      margin: 8px 0;
+      .opps {
+        margin: 8px 0;
+        .text-danger {
+          color: red;
+        }
+      }
+      .lead {
+        margin: 15px 0;
+      }
+      button {
+        cursor: pointer;
+        border-radius: 6px;
+        background-color: rgb(160, 31, 31);
+        border: 0;
+        outline: 0;
+        padding: 10px 15px;
+          color: white;
+      }
+    }
+  }
+}

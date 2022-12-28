@@ -1,0 +1,32 @@
+#header {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+  header {
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      h1 {
+        color: rgb(160, 31, 31);
+        font-size: 25px;
+      }
+    }
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          margin: 20px;
+          color: rgb(97, 97, 97);
+          &.active {
+            color: rgb(160, 31, 31);
+          }
+        }
+      }
+    }
+  }
+}
