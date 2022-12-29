@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  row-gap: 50px;
   .detail-card {
     margin-top: 40px;
     padding: 10px;
@@ -21,6 +23,8 @@
     }
     .btn{
         margin-top: 10px;
+        display: flex;
+        column-gap: 10px;
         button{
             cursor: pointer;
             border-radius: 6px;
