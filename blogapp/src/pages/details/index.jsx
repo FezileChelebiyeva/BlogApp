@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet";
 
 const DetailsPage = () => {
   const input = useRef();
+  const textarea = useRef();
+  const select = useRef();
   const { id } = useParams();
   const navigate = useNavigate();
   const [blog, setBlog] = useState({});
@@ -22,9 +24,18 @@ const DetailsPage = () => {
       .then((response) => setBlog(response.data))
       .then(() => navigate("/"));
   };
-  const handleEdit = (e) => {
-    editStatus ? setEditStatus(false) : setEditStatus(true);
-  };
+  // const handleEdit = (e) => {
+  //   editStatus ? setEditStatus(false) : setEditStatus(true);
+  //   input.current.value = blog.blogTitle 
+  // };
+  // const handleSubmit = (e) => {
+  //   let obj = {
+  //     blogTitle: input.current.value,
+  //     blogBody: textarea.current.value,
+  //     blogAuthor: select.current.value,
+  //   }
+  //   console.log(obj);
+  // };
 
   return (
     <div id="details">
@@ -48,25 +59,33 @@ const DetailsPage = () => {
           >
             Delete
           </button>
-          <button
+          {/* <button
             id={blog.id}
             onClick={(e) => handleEdit(e)}
             className="deleteBtn"
           >
             Edit
-          </button>
+          </button> */}
         </div>
       </div>
-      {editStatus ? (
+      {/* {editStatus ? (
         <div>
           <div>
-          <input value={blog.blogTitle} type="text" />
+            <input ref={input} type="text" />
           </div>
           <div>
-          <input type="text" />
+            <textarea ref={textarea} cols="40" rows="2" value={blog.blogBody} type="text" />
+            <br />
+            <select ref={select} value={blog.blogAuthor} name="" id="">
+              <option value="kenan">kenan</option>
+              <option value="gurban">gurban</option>
+              <option value="fezile">fezile</option>
+            </select>
+            <br /><br />
+            <button onClick={() => handleSubmit()}>Submit</button>
           </div>
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   );
 };
